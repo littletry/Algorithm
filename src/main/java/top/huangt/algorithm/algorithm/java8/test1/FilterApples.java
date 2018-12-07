@@ -2,6 +2,7 @@ package top.huangt.algorithm.algorithm.java8.test1;
 
 import java.util.ArrayList;
 import java.util.List;
+import static java.util.stream.Collectors.toList;
 
 /**
  * @Author: ht
@@ -38,6 +39,7 @@ public class FilterApples {
 
         List<Apple> apples1 = filterApples(apples, Apple::isGreenApple);
         List<Apple> apples2 = filterApples(apples, Apple::isHeavyApple);
+        List<Apple> apples3 = apples.stream().filter((Apple a) -> a.getWeight() > 150).collect(toList());
 
         System.out.println("apples1");
         for (Apple apple: apples1) {
@@ -45,6 +47,10 @@ public class FilterApples {
         }
         System.out.println("apples2");
         for (Apple apple: apples2) {
+            System.out.println(apple.toString());
+        }
+        System.out.println("apples3");
+        for (Apple apple: apples3) {
             System.out.println(apple.toString());
         }
     }
