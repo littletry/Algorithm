@@ -33,9 +33,15 @@ public class FilterApples {
         Apple apple1 = new Apple("a1", "green", 160);
         Apple apple2 = new Apple("a2", "red", 120);
         Apple apple3 = new Apple("a3", "blue", 151);
+        Apple apple4 = new Apple("a4", "black", 148);
+        Apple apple5 = new Apple("a5", "purple", 130);
+        Apple apple6 = new Apple("a6", "brown", 159);
         apples.add(apple1);
         apples.add(apple2);
         apples.add(apple3);
+        apples.add(apple4);
+        apples.add(apple5);
+        apples.add(apple6);
 
         List<Apple> apples1 = filterApples(apples, Apple::isGreenApple);
         printApple("apples1", apples1);
