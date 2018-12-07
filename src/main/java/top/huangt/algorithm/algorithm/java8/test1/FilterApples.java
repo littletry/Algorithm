@@ -38,19 +38,18 @@ public class FilterApples {
         apples.add(apple3);
 
         List<Apple> apples1 = filterApples(apples, Apple::isGreenApple);
+        printApple("apples1", apples1);
         List<Apple> apples2 = filterApples(apples, Apple::isHeavyApple);
+        printApple("apples2", apples2);
         List<Apple> apples3 = apples.stream().filter((Apple a) -> a.getWeight() > 150).collect(toList());
+        printApple("apples3", apples3);
+        List<Apple> apples4 = apples.parallelStream().filter((Apple a) -> a.getWeight() > 150).collect(toList());
+        printApple("apples4", apples4);
 
-        System.out.println("apples1");
-        for (Apple apple: apples1) {
-            System.out.println(apple.toString());
-        }
-        System.out.println("apples2");
-        for (Apple apple: apples2) {
-            System.out.println(apple.toString());
-        }
-        System.out.println("apples3");
-        for (Apple apple: apples3) {
+    }
+    private static void printApple(String whichApples, List<Apple> apples) {
+        System.out.println(whichApples + ":");
+        for (Apple apple: apples) {
             System.out.println(apple.toString());
         }
     }
