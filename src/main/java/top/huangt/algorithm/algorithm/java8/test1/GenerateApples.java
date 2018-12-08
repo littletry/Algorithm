@@ -25,6 +25,17 @@ public class GenerateApples {
         return apples;
     }
 
+    public List<Integer> generateInts() {
+        List<Integer> ints = new ArrayList<>();
+        ints.add(1);
+        ints.add(9);
+        ints.add(3);
+        ints.add(23);
+        ints.add(4);
+        ints.add(12);
+        return ints;
+    }
+
     public interface Predicate<T> {
         boolean test(T t);
     }
