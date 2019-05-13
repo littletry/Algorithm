@@ -12,7 +12,7 @@ public class MaxFeed {
     /**
      * 剩余蛋糕数量
      */
-    static int leftCakes[];
+    static int[] leftCakes;
     /**
      * 蛋糕总量（不是数量，而是大小之和）
      */
